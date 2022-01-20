@@ -8,9 +8,12 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="foreground_color">#555557</color>
+    <color name="foreground_color">#88555557</color>
     <color name="text_color_1">#B3B5C0</color>
     <color name="text_color_2">#AEA9AE</color>
 
     <color name="item_book_bg">#555B6C</color>
+    <color name="item_hotel_bg">#55FBEED7</color>
+
+    <color name="tab_color_bg">#F6F8FB</color>
 </resources>

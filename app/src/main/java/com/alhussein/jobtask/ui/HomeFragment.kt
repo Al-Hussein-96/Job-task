@@ -37,11 +37,13 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val tabArray = arrayOf(
+        val tabArray = arrayListOf(
             getString(R.string.overview),
             getString(R.string.hotels),
             getString(R.string.transportation)
         )
+
+
 
         val viewPager = binding.viewpager2
         val tabLayout = binding.tabLayout

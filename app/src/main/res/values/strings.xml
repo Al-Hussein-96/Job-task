@@ -8,4 +8,5 @@
     <string name="transportation">Transportation</string>
     <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</string>
     <string name="book">Book</string>
+    <string name="book_now">Book now</string>
 </resources>

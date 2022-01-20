@@ -22,4 +22,9 @@
     <style name="AppTheme.OverlapSystemBar" parent="Theme.JobTask" />
 
     <style name="Toolbar" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="hotelRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:minHeight">22dip</item>
+        <item name="android:maxHeight">22dip</item>
+    </style>
 </resources>
