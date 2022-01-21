@@ -9,8 +9,10 @@ import androidx.viewpager.widget.ViewPager
 import com.alhussein.jobtask.R
 import com.alhussein.jobtask.databinding.FragmentHomeBinding
 import com.google.android.material.tabs.TabLayout
+import com.google.android.material.tabs.TabLayout.OnTabSelectedListener
 import com.google.android.material.tabs.TabLayoutMediator
-
+import androidx.annotation.NonNull
+import androidx.viewpager2.widget.ViewPager2
 
 
 class HomeFragment : Fragment() {
@@ -33,7 +35,6 @@ class HomeFragment : Fragment() {
     }
 
 
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -44,17 +45,44 @@ class HomeFragment : Fragment() {
         )
 
 
-
         val viewPager = binding.viewpager2
         val tabLayout = binding.tabLayout
 
         val adapter = ViewPagerAdapter(requireActivity().supportFragmentManager, lifecycle)
         viewPager.adapter = adapter
 
+        viewPager.setPageTransformer { page, position ->
+            page.alpha = 0f
+            page.visibility = View.VISIBLE
+
+            // Start Animation for a short period of time
+            page.animate()
+                .alpha(1f).duration = 1000
+        }
 
         TabLayoutMediator(tabLayout, viewPager) { tab, position ->
             tab.text = tabArray[position]
         }.attach()
+
+        tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
+            override fun onTabSelected(tab: TabLayout.Tab?) {
+                if (tab!!.position == 2) {
+                    binding.constraintLayout.transitionToEnd()
+                } else {
+                    binding.constraintLayout.transitionToStart()
+                }
+
+            }
+
+            override fun onTabUnselected(tab: TabLayout.Tab?) {
+            }
+
+            override fun onTabReselected(tab: TabLayout.Tab?) {
+            }
+
+        })
+
+
     }
 
     companion object {
