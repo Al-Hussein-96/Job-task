@@ -26,8 +26,7 @@
             android:adjustViewBounds="false"
             android:scaleType="center"
             android:src="@drawable/hotel_img"
-
-            app:shapeAppearance="@drawable/img_background" />
+            />
 
     </com.google.android.material.card.MaterialCardView>
 

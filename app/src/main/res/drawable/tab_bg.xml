@@ -3,5 +3,4 @@
     <corners android:radius="32dp" />
     <solid android:color="@color/tab_color_bg" />
 
-
 </shape>

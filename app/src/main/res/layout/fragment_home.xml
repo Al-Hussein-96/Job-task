@@ -72,9 +72,8 @@
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tab_layout"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-
             android:layout_marginHorizontal="20dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/tab_bg"
@@ -84,6 +83,8 @@
             app:tabBackground="@drawable/tab_layout_selector"
             app:tabGravity="center"
             app:tabIndicator="@null"
+            app:tabMode="fixed"
+            app:tabRippleColor="@android:color/transparent"
             app:tabSelectedTextColor="@color/white"
             app:tabTextAppearance="@style/TextAppearance.AppCompat.Small"
             app:tabTextColor="@color/text_color_1">
@@ -91,7 +92,6 @@
             <com.google.android.material.tabs.TabItem
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
                 android:text="@string/overview" />
 
             <com.google.android.material.tabs.TabItem
