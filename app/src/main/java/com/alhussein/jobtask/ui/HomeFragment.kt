@@ -51,7 +51,7 @@ class HomeFragment : Fragment() {
         val adapter = ViewPagerAdapter(requireActivity().supportFragmentManager, lifecycle)
         viewPager.adapter = adapter
 
-        viewPager.setPageTransformer { page, position ->
+        viewPager.setPageTransformer { page, _ ->
             page.alpha = 0f
             page.visibility = View.VISIBLE
 
